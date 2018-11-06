@@ -4,3 +4,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDA0OTQyNzIsInVzZXJuYW1lIjoiQ2V
 a94a2899d977fddd5ac68ef1febec1f901a3bb8786279c9bf92de3fdf5292149
 
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDA5MzEwNTksInVzZXJuYW1lIjoiUGF5ZXIiLCJvcmdOYW1lIjoiT3JnMiIsImlhdCI6MTU0MDg5NTA1OX0.XgEZKpBZf-6uezyUFc1ESv0K89cwmA0DLfs6CuzWKV4
+
+
+
+curl -i -H "Accept: application/json+fhir" https://fhir-open.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/Procedure?patient=1316020
