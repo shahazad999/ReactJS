@@ -8,3 +8,18 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDA5MzEwNTksInVzZXJuYW1lIjoiUGF
 
 
 curl -i -H "Accept: application/json+fhir" https://fhir-open.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/Procedure?patient=1316020
+
+
+		const httpGet = url => {
+		return new Promise((resolve, reject) => {
+			http.get(url, res => {
+			res.setEncoding('utf8');
+			let body = ''; 
+			res.on('data', chunk => body += chunk);
+			res.on('end', () => resolve(body));
+			}).on('error', reject);
+		});
+		}
+		const body = await httpGet(url);	
+		console.log( "Returned CouchDB hash is " +JSON.parse(body)._rev );
+		return JSON.parse(body)._rev;
